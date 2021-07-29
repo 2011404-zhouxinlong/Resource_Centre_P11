@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ResourceCentre {
 
 
-	private static final int OPTION_QUIT = 5;
+	private static final int OPTION_QUIT = 5; //Extract constant
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -28,7 +28,8 @@ public class ResourceCentre {
 
 			} else if (option == 2) {
 				// Add a new item
-				ResourceCentre.setHeader("ADD");			
+				ResourceCentre.setHeader("ADD");	
+				//Extract Method
 				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
@@ -204,7 +205,7 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 			
-			String assetTag = camcorderList.get(i).getAssetTag();
+			String assetTag = camcorderList.get(i).getAssetTag();   //Extract Variable 
 			
 			if (tag.equalsIgnoreCase(assetTag)				
 					&& camcorderList.get(i).getIsAvailable() == true) {
